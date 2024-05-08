@@ -1,30 +1,29 @@
-        header {
-            background-color: rgba(173, 216, 230, 0.7); 
-            padding: 20px 30px; 
+             header {
+            background-color: rgba(180, 255, 253, 0.8); 
+            padding: 10px 0.1px; 
             text-align: center; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
             width: 100%; 
             z-index: 1000; 
             display: flex; 
             justify-content: space-between; 
-            align-items: center; 
+            align-items: center;
         }
+        
 
         .logo {
             color: #333; 
             font-weight: bold; 
             text-align: left; 
             flex-grow: 1; 
-            margin-right: 20px; 
+            margin-right: 10px; 
+            margin-left: 5px;
         }
 
         header img {
             max-height: 40px; 
             max-width: 100%; 
             vertical-align: middle; 
-            margin-right: 10px;
+            margin-left: 5px;
         }
 
         nav {
@@ -39,20 +38,37 @@
         }
 
         .seccion {
-            width: 100%; 
-            box-sizing: border-box; 
-            padding: 20px; 
-            position: relative; 
-            margin-top: 20px; 
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            position: relative;
+            margin: 0;
             background-size: cover;
             background-position: center;
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
             align-items: flex-start;
-            flex-direction: column; 
-            text-align: center; 
-            color: #333; 
+            flex-direction: column;
+            text-align: center;
+            color: #333;
+        }
+        
+        .seccionredes {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0;
+            position: relative;
+            margin: 0;
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: center;
+            color: #333;
         }
 
         .seccion h2 {
@@ -71,16 +87,28 @@
             bottom: -5px; 
             width: 100%; 
             height: 2px; 
-            background-color: #333; 
+            background-color: hsl(0, 0%, 0%); 
         }
 
         #seccion2, #seccion4, #seccion6 {
-            background-color: #add8e6; 
+            background-image: linear-gradient(to bottom, #b4fffd 75%, #ffffff);
             position: relative; 
             z-index: 1; 
             backdrop-filter: blur(30px); 
-            padding: 20px; 
-            color: #333; 
+            padding: 15px; 
+            color: #1f1c1c; 
+            text-align: center; 
+            display: flex; 
+            justify-content: space-between; 
+        }
+
+        #seccion1, #seccion3, #seccion5, #seccion7 {
+            background-image: linear-gradient(to bottom, #ffffff 75%, #b4fffd);
+            position: relative; 
+            z-index: 1; 
+            backdrop-filter: blur(30px); 
+            padding: 15px; 
+            color: #1f1c1c; 
             text-align: center; 
             display: flex; 
             justify-content: space-between; 
@@ -99,14 +127,25 @@
       
         #seccion1-texto {
             position: absolute;
-            top: 50%;
+            top:30%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white;
-            font-size: 120px; 
-            font-weight: bold; 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        #seccion1-texto h1, #seccion1-texto p {
+            margin: 0; 
+        }
+        
+        #seccion1-texto .main-text {
+            font-size: 100px;
+            font-weight: bold;
+        }
+        
+        #seccion1-texto .sub-text {
+            font-size: 60px;
         }
 
         .seccion img {
@@ -118,9 +157,9 @@
             object-fit: cover;
         }
         
-        #seccion6 {
+        #seccion7 {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
         }
         
@@ -175,26 +214,31 @@
             opacity: 1; 
         }
 
-        .imagenes-container {
-            display: flex;
-        }
 
         .imagen {
             flex: 1;
-            margin: 10px; 
-            position: relative; 
-            transition: opacity 0.3s ease; 
+            margin: 5px;
+            position: relative;
+            transition: opacity 0.8s ease;
+            max-width: 100%; 
+            height: auto;        
+        }
+        
+        .imagen img {
+            width: 500px; 
+            height: 350px; 
+            max-width: 100%; 
+            max-height: 100%; 
+        }
+        
+        .imagenes-container {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
         }
 
         .imagen:hover {
             opacity: 0.5; 
-        }
-
-        .imagen img {
-            width: 100%; 
-            height: auto; 
-            max-width: 100%; 
-            max-height: 100%; 
         }
 
         .imagenes {
@@ -217,8 +261,8 @@
             top: 50%; 
             left: 50%; 
             transform: translate(-50%, -50%); 
-            color: white; 
-            font-size: 20px; 
+            color: rgb(0, 0, 0); 
+            font-size: 30px; 
             opacity: 0; 
             pointer-events: none; 
         }
@@ -226,4 +270,40 @@
         .imagen:hover .texto-detras {
             opacity: 1; 
         }    
-
+        
+        #seccion6 {
+            text-align: center; 
+        }
+        
+        #seccion6 p {
+            font-size: 40px;
+        }
+        
+        #seccion6 button {
+            background-color: #41fcc4; 
+            color: white;
+            padding: 15px 30px; 
+            font-size: 20px;
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer;
+            margin-top: 15px; 
+            display: inline-block; 
+        }
+        
+        .botones-container {
+            text-align: center; 
+        }
+        
+        .botones-container button {
+            background-color: #52ffee; 
+            color: white;
+            padding: 15px 30px; 
+            font-size: 20px;
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;
+            margin: 250px; 
+            display: inline-block; 
+        }
+        
