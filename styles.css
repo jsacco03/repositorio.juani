@@ -1,5 +1,5 @@
-             header {
-            background-color: rgba(180, 255, 253, 0.8); 
+         header {
+            background-color: rgba(180, 255, 253, 0.3); 
             padding: 10px 0.1px; 
             text-align: center; 
             width: 100%; 
@@ -9,6 +9,10 @@
             align-items: center;
         }
         
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
 
         .logo {
             color: #333; 
@@ -90,6 +94,7 @@
             background-color: hsl(0, 0%, 0%); 
         }
 
+     
         #seccion2, #seccion4, #seccion6 {
             background-image: linear-gradient(to bottom, #b4fffd 75%, #ffffff);
             position: relative; 
@@ -147,6 +152,9 @@
         #seccion1-texto .sub-text {
             font-size: 60px;
         }
+        
+        
+        
 
         .seccion img {
             max-width: 100%; 
@@ -270,9 +278,9 @@
         .imagen:hover .texto-detras {
             opacity: 1; 
         }    
-        
+
         #seccion6 {
-            text-align: center; 
+            text-align: center;
         }
         
         #seccion6 p {
@@ -303,7 +311,13 @@
             border: none; 
             border-radius: 5px; 
             cursor: pointer;
-            margin: 250px; 
+            margin: 185px; 
             display: inline-block; 
         }
-        
+       
+        @media screen and (max-width: 400px) {
+
+        }
+
+
+
