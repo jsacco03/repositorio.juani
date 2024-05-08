@@ -12,12 +12,6 @@ function cambiarImagen(direccion) {
     imagen.src = imagenes[indiceImagenActual];
 }
 
-document.getElementById('calcular-btn').addEventListener('click', function() {
-    var tipoEntrada = document.getElementById('tipo-entrada').value;
-    var categoriaPersona = document.getElementById('categoria-persona').value;
-    var valorEntrada = calcularValorEntrada(tipoEntrada, categoriaPersona);
-    mostrarResultado(valorEntrada);
-});
 
 function calcularValorEntrada(tipoEntrada, categoriaPersona) {
     var valor = 0;
@@ -67,5 +61,32 @@ function calcularValorEntrada(tipoEntrada, categoriaPersona) {
 
 function mostrarResultado(valor) {
     var resultadoDiv = document.getElementById('resultado');
-    resultadoDiv.innerHTML = 'El valor de tu entrada es: ' + valor + ' USD';
+    resultadoDiv.innerHTML = 'El valor de tu entrada es: ' + valor + ' ARS';
+}
+
+function calcularYMostrarResultado() {
+    var tipoEntrada = document.getElementById('tipo-entrada').value;
+    var categoriaPersona = document.getElementById('categoria-persona').value;
+    
+    
+    if (tipoEntrada === "" || categoriaPersona === "") {
+        alert("Por favor, seleccione tanto el tipo de entrada como la categoría de persona.");
+        return; 
+    }
+
+    var valor = calcularValorEntrada(tipoEntrada, categoriaPersona);
+
+    mostrarResultado(valor);
+
+    var overlay = document.getElementById('overlay');
+    var modal = document.getElementById('modal');
+    overlay.style.display = 'block';
+    modal.style.display = 'block';
+}
+
+function cerrarModal() {
+    var overlay = document.getElementById('overlay');
+    var modal = document.getElementById('modal');
+    overlay.style.display = 'none';
+    modal.style.display = 'none';
 }
