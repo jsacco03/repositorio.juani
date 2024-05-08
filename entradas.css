@@ -3,17 +3,18 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('https://pbs.twimg.com/media/EDgoTF_XYAEytpN.jpg');
-    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-size: cover; 
     background-position: center;
 }
 
 .container {
     width: 50%;
-    margin: 100px auto; /* Centrar el contenedor */
-    background-color: rgba(255, 255, 255, 0.5); /* Fondo del contenedor con transparencia */
+    margin: 100px auto; 
+    background-color: rgba(255, 255, 255, 0.5); 
+    text-align: center;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el contenedor */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
 }
 
 .options {
@@ -29,4 +30,51 @@ select {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e9fffd; 
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.7s;
+}
+  
+button:hover {
+    background-color: #feffff; 
+}
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999;
+    display: none; 
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+  }
+
+  .modal button {
+    display: block; 
+    margin: 0 auto; 
+  }
+
+  #resultado {
+    text-align: center;
 }
