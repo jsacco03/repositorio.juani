@@ -14,17 +14,17 @@ function cambiarImagen(direccion) {
 
 document.getElementById('calcular-btn').addEventListener('click', function() {
     var tipoEntrada = document.getElementById('tipo-entrada').value;
-    var grupoDemografico = document.getElementById('grupo-demografico').value;
-    var valorEntrada = calcularValorEntrada(tipoEntrada, grupoDemografico);
+    var categoriaPersona = document.getElementById('categoria-persona').value;
+    var valorEntrada = calcularValorEntrada(tipoEntrada, categoriaPersona);
     mostrarResultado(valorEntrada);
 });
 
-function calcularValorEntrada(tipoEntrada, grupoDemografico) {
+function calcularValorEntrada(tipoEntrada, categoriaPersona) {
     var valor = 0;
     switch (tipoEntrada) {
         case 'popular_local':
-            switch (grupoDemografico) {
-                case 'hombre_mayor':
+            switch (categoriaPersona) {
+                case 'hombre_adulto':
                     valor = 10000;
                     break;
                 case 'mujer_adulta':
@@ -35,7 +35,32 @@ function calcularValorEntrada(tipoEntrada, grupoDemografico) {
                     break;
             }
             break;
-        // Puedes añadir más casos para otros tipos de entradas aquí
+        case 'preferencial':
+            switch (categoriaPersona) {
+                case 'hombre_adulto':
+                    valor = 15000;
+                    break;
+                case 'mujer_adulta':
+                    valor = 13500;
+                    break;
+                case 'menor':
+                    valor = 10000;
+                    break;
+            }
+            break;
+        case 'platea':
+            switch (categoriaPersona) {
+                case 'hombre_adulto':
+                    valor = 12500;
+                    break;
+                case 'mujer_adulta':
+                    valor = 11000;
+                    break;
+                case 'menor':
+                    valor = 9000;
+                    break;
+            }
+            break;
     }
     return valor;
 }
@@ -44,4 +69,3 @@ function mostrarResultado(valor) {
     var resultadoDiv = document.getElementById('resultado');
     resultadoDiv.innerHTML = 'El valor de tu entrada es: ' + valor + ' USD';
 }
-
