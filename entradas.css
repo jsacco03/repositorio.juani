@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://pbs.twimg.com/media/EDgoTF_XYAEytpN.jpg');
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center;
+}
+
+.container {
+    width: 50%;
+    margin: 100px auto; /* Centrar el contenedor */
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo del contenedor con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el contenedor */
+}
+
+.options {
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

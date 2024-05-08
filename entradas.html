@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular valor de la entrada</title>
+    <link rel="stylesheet" href="entradas.css">
+</head>
+<body>
+    <div class="container">
+        <h2>TuEntrada</h2>
+        <p>No sacaste tu entrada todavía? No sos socio aún? No pierdas más tiempo y sé parte de la historia de El Primer Grande!</p>
+        <div class="options">
+            <h3>Tipo de entrada:</h3>
+            <select name="tipo_entrada" id="tipo-entrada">
+                <option value="popular_local">Popular Local</option>
+                <option value="preferencial">Preferencial</option>
+                <option value="platea">Platea</option>
+            </select>
+        </div>
+        <div class="options">
+            <h3>Grupo demográfico:</h3>
+            <select name="grupo_demografico" id="grupo-demografico">
+                <option value="hombre_mayor">Hombre Mayor</option>
+                <option value="mujer_adulta">Mujer Adulta</option>
+                <option value="menor">Menor</option>
+            </select>
+        </div>
+        <button id="calcular-btn">Calcular valor de la entrada</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script src="./index.js">
+</script>
+</html>
