@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular valor de la entrada</title>
+    <title>Seleccionar entradas y agregar al carrito</title>
     <link rel="stylesheet" href="entradas.css">
 </head>
 <body>
     <div class="container">
         <h2>VENI A ALENTAR AL PRIMER GRANDE</h2>
-        <p>Descubre cuál es el valor de la entrada a adquirir seleccionando el sector y la categoría deseada:</p>
+        <p>Seleccione el sector del estadio, la categoría de persona y la cantidad deseada:</p>
         <div class="options">
             <h3>Sector del Estadio:</h3>
             <select name="tipo_entrada" id="tipo-entrada">
                 <option value="">Seleccione...</option> 
-                <option value="popular_local">Popular Local</option>
-                <option value="preferencial">Preferencial</option>
-                <option value="platea">Platea</option>
+                <option value="Popular_local">Popular Local</option>
+                <option value="Platea_preferencial">Preferencial</option>
+                <option value="Platea">Platea</option>
+                <option value="Visitante">Visitante</option>
             </select>
         </div>
         <div class="options">
@@ -28,14 +29,33 @@
                 <option value="menor">Menor</option>
             </select>
         </div>
-        <button id="calcular-btn" onclick="calcularYMostrarResultado()">Calcular valor de la entrada</button>
+        <div class="options">
+            <h3>Cantidad de entradas:</h3>
+            <select name="cantidad_entradas" id="cantidad-entradas">
+                <option value="">Seleccione...</option> 
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <button id="agregar-al-carrito-btn">Agregar al carrito</button>
     </div>
+
     <div class="overlay" id="overlay"></div>
-    <div class="modal" id="modal">
-        <div id="resultado"></div>
-        <button onclick="cerrarModal()">Cerrar</button>
-    </div>
-    <script src="index.js"></script>
+    <div class="Amodal" id="modal">
+        <div id="carrito">
+            <h3>Entradas agregadas al carrito con éxito</h3>
+            <div id="entrada-categoria"></div>
+            <p id="valor-total"></p>
+        </div>
+        <div class="Abuttons">
+            <button onclick="cerrarModal()">Cerrar</button>
+            <a href="pagina-de-pago.html"><button class="pagar-btn">Ir a pagar</button></a>
+        </div>
+    </div> 
+
+    <script src="AAindex.js"></script>
 </body>
 </html>
 
