@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Racing Club</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+    <header>
+        <div class="carrito-container">
+            <button id="ver-carrito">Ver Carrito</button>
+            <img src="https://i.pinimg.com/originals/31/3c/11/313c1187480abab29cbfabfc39c8b9be.png" alt="Carrito de compras">
+        </div>
+        <h1>TiendaRacing</h1>
+    </header>
+    
+    <div class="products" id="products">
+        
+    </div>
+    
+    <div id="carrito" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-items"></div>
+            <h3 id="total">Total: $0</h3>
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            <button id="ir-a-pagar">Ir a pagar</button>
+        </div>
+    </div>
+
+    <div id="mensaje-producto" class="mensaje-producto">
+        
+    </div>
+
+    <footer>
+        <p>Productos oficiales del Primer Grande</p>
+    </footer>
+
+    <script src="carrito.js"></script>
+</body>
+</html>
